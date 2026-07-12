@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>偏差値の先にある「生きる力」を。｜広島三育学院 中学校・高等学校［全寮制］</title>
+<meta name="description" content="広島の山あいに立つ全寮制・男女共学のキリスト教学校。成績ではなく「生き方」で選ぶ全人教育。お子さんと三育の相性を、30秒の診断でお確かめください。" />
+<meta name="robots" content="index,follow" />
+<meta property="og:title" content="偏差値の先にある「生きる力」を。｜広島三育学院 中学校・高等学校" />
+<meta property="og:description" content="成績ではなく、生き方で選ぶ。全寮制で「どう生きるか」を問い続ける全人教育。まずは30秒の相性診断から。" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+<style>
+  /* ============================================================
+     広島三育学院 — Editorial Landing (quiet premium / mincho)
+     Concept: a literary prospectus. Numbered chapters, editorial
+     grid, oversized mincho, gold as a single precise accent.
+     ============================================================ */
+  :root{
+    /* palette — brand, used boldly */
+    --green-deep:#102A20;
+    --green-dark:#1C4433;
+    --green-mid:#2D6A4F;
+    --gold:#C9A050;
+    --gold-soft:#D9B978;
+    --gold-light:#E8C97A;
+    --paper:#F7F3EA;       /* dominant paper */
+    --paper-2:#F1EADC;     /* secondary paper */
+    --ink:#1A2620;         /* body ink on paper */
+    --ink-soft:#4F5C53;    /* muted ink */
+    --ink-faint:#8A9489;
+    --cream:#F4EFE3;
+    --line-green:#06C755;
+    --line-green-dark:#05A847;
+
+    /* type */
+    --mincho:'Zen Old Mincho',serif;
+    --gothic:'Zen Kaku Gothic New',sans-serif;
+    --latin:'Cormorant Garamond',Georgia,serif;
+
+    --ease:cubic-bezier(.2,.7,.2,1);
+    --col:1140px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;width:100%}
+  body{
+    font-family:var(--gothic);font-weight:400;
+    background:var(--paper);color:var(--ink);
+    line-height:1.95;letter-spacing:.01em;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+    /* subtle paper grain */
+    background-image:radial-gradient(rgba(28,68,51,.018) 1px,transparent 1px);
+    background-size:4px 4px;
+  }
+  img{display:block;max-width:100%}
+  ::selection{background:rgba(201,160,80,.3)}
+  .min{font-family:var(--mincho)}
+
+  /* ===== ACCESS ===== */
+  .skip{position:fixed;top:-60px;left:16px;z-index:1000;background:var(--green-dark);color:#fff;padding:10px 18px;font-size:13px;text-decoration:none;transition:top .2s}
+  .skip:focus{top:0}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+
+  /* ===== GRID SHELL ===== */
+  .col{max-width:var(--col);margin:0 auto;padding:0 clamp(22px,5vw,64px)}
+  .bleed{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+
+  /* ===== EDITORIAL CHAPTER MARKER ===== */
+  .chap{display:flex;align-items:flex-end;gap:18px;margin-bottom:clamp(36px,5vw,64px)}
+  .chap__no{font-family:var(--latin);font-size:clamp(40px,6vw,64px);line-height:.8;color:var(--gold);font-weight:500;font-style:italic}
+  .chap__rule{flex:1;height:1px;background:linear-gradient(90deg,var(--gold),rgba(201,160,80,.2));margin-bottom:10px}
+  .chap__label{text-align:right;line-height:1.5;flex:none}
+  .chap__label .en{font-family:var(--latin);font-size:14px;letter-spacing:.16em;color:var(--ink-soft);text-transform:uppercase;display:block}
+  .chap__label .jp{font-family:var(--mincho);font-size:12px;letter-spacing:.24em;color:var(--ink-faint)}
+  .chap--light .chap__no{color:var(--gold-light)}
+  .chap--light .chap__rule{background:linear-gradient(90deg,var(--gold-light),rgba(232,201,122,.2))}
+  .chap--light .en{color:rgba(255,255,255,.7)}
+  .chap--light .jp{color:rgba(255,255,255,.45)}
+
+  /* ===== NAV ===== */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+    padding:16px clamp(22px,5vw,64px);background:rgba(247,243,234,.82);backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(28,68,51,.08);transition:transform .4s var(--ease)}
+  .nav__logo{font-family:var(--mincho);font-size:14px;color:var(--green-dark);font-weight:500;letter-spacing:.06em;line-height:1.4;text-decoration:none}
+  .nav__logo small{display:block;font-family:var(--latin);font-size:10px;font-style:italic;letter-spacing:.1em;color:var(--ink-faint)}
+  .nav__cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--gothic);font-size:12.5px;font-weight:500;color:var(--green-dark);text-decoration:none;letter-spacing:.04em;
+    border:1px solid var(--green-dark);border-radius:0;padding:9px 18px;transition:.25s var(--ease)}
+  .nav__cta:hover{background:var(--green-dark);color:var(--paper)}
+
+  /* ===== HERO (Spread 01) ===== */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+  .hero__grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(24px,4vw,56px);align-items:center;width:100%}
+  .hero__copy{position:relative;z-index:3}
+  .hero__eyebrow{font-family:var(--latin);font-style:italic;font-size:16px;letter-spacing:.08em;color:var(--green-mid);margin-bottom:22px;display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px}
+  .hero__eyebrow::before{content:'';width:34px;height:1px;background:var(--gold)}
+  .hero h1{font-family:var(--mincho);font-weight:500;color:var(--green-deep);
+    font-size:clamp(33px,4.8vw,56px);line-height:1.32;letter-spacing:.04em;margin-bottom:28px}
+  .hero h1 .q{color:var(--gold);font-weight:600}
+  .hero h1 .small{display:block;font-size:.46em;font-weight:500;letter-spacing:.1em;color:var(--ink);margin-top:.4em;line-height:1.7}
+  .hero__lead{font-size:clamp(13px,1.5vw,16px);color:var(--ink-soft);line-height:2;max-width:none;margin-bottom:40px;font-weight:400;white-space:nowrap}
+  .hero__lead .ln{display:block}
+  .hero__lead b{color:var(--green-dark);font-weight:500}
+  .hero__cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:20px}
+  .hero__cap{font-size:12px;color:var(--ink-faint);letter-spacing:.03em;line-height:1.7}
+
+  .hero__media{position:relative;align-self:stretch;min-height:440px;order:-1}
+  .hero__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:75% center;filter:saturate(.94) brightness(.68)}
+  .hero__media::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(16,42,32,.18),transparent 55%);mix-blend-mode:multiply}
+  .hero__mediaframe{position:absolute;inset:0;border:1px solid rgba(201,160,80,.5);pointer-events:none;margin:14px;z-index:2}
+  .hero__vert{position:absolute;top:0;left:-30px;writing-mode:vertical-rl;font-family:var(--mincho);font-size:14px;letter-spacing:.5em;color:var(--green-mid);z-index:3;height:max-content}
+  .hero__scroll{position:absolute;left:clamp(22px,5vw,64px);bottom:26px;z-index:3;font-family:var(--latin);font-style:italic;font-size:13px;letter-spacing:.2em;color:var(--ink-faint);display:flex;align-items:center;gap:10px}
+  .hero__scroll i{width:42px;height:1px;background:var(--ink-faint);transform-origin:left;animation:scl 2s var(--ease) infinite}
+  @keyframes scl{0%,100%{transform:scaleX(.4);opacity:.5}50%{transform:scaleX(1);opacity:1}}
+
+  /* ===== BUTTONS ===== */
+  .btn{display:inline-flex;align-items:center;gap:11px;font-family:var(--gothic);font-weight:500;text-decoration:none;cursor:pointer;border:none;letter-spacing:.04em;line-height:1.3;transition:.28s var(--ease)}
+  .btn .arr{transition:transform .28s var(--ease)}
+  .btn:hover .arr{transform:translateX(5px)}
+  .btn--fill{background:var(--green-dark);color:var(--paper);padding:17px 30px;font-size:15px;position:relative}
+  .btn--fill::after{content:'';position:absolute;inset:5px;border:1px solid rgba(232,201,122,.35);pointer-events:none;transition:inset .28s var(--ease)}
+  .btn--fill:hover{background:var(--green-mid)}
+  .btn--fill:hover::after{inset:7px}
+  .btn--gold{background:var(--gold);color:#33260a;padding:18px 34px;font-size:16px;font-weight:700;box-shadow:0 14px 34px rgba(201,160,80,.34)}
+  .btn--gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+  .btn--line{background:var(--line-green);color:#fff;padding:16px 28px;font-size:15px;font-weight:700}
+  .btn--line:hover{background:var(--line-green-dark)}
+  .btn--text{color:var(--green-dark);font-size:14px;padding-bottom:4px;border-bottom:1px solid var(--gold)}
+  .btn--text:hover{color:var(--green-mid)}
+  .btn--text-light{color:var(--gold-light);font-size:14px;padding-bottom:4px;border-bottom:1px solid rgba(232,201,122,.5)}
+  .btn--text-light:hover{color:#fff}
+
+  /* ===== SPREAD base ===== */
+  .spread{padding:clamp(86px,13vw,160px) 0}
+  .spread--tight{padding:clamp(64px,9vw,110px) 0}
+  .spread--green{background:var(--green-deep);color:var(--paper)}
+  .spread--paper2{background:var(--paper-2)}
+
+  /* ===== ORIENT (はじめに) ===== */
+  .orient__grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,72px);align-items:start}
+  .orient__big{font-family:var(--mincho);font-size:clamp(22px,3.2vw,30px);font-weight:500;color:var(--green-dark);line-height:1.85;letter-spacing:.04em}
+  .orient__big b{color:var(--green-mid);background:linear-gradient(transparent 62%,rgba(201,160,80,.32) 62%)}
+  .orient__facts{border-top:1px solid rgba(28,68,51,.16)}
+  .fact{display:flex;align-items:baseline;gap:18px;padding:18px 4px;border-bottom:1px solid rgba(28,68,51,.12)}
+  .fact__no{font-family:var(--latin);font-style:italic;font-size:17px;color:var(--gold);flex:none;width:30px}
+  .fact__t{font-family:var(--mincho);font-size:16px;color:var(--green-dark);font-weight:500;flex:none;min-width:9.5em}
+  .fact__d{font-size:13px;color:var(--ink-soft);line-height:1.7}
+  @media(max-width:560px){.fact{flex-wrap:wrap;gap:6px 14px}.fact__t{min-width:auto}}
+
+  /* ===== EMPATHY (Spread 02) ===== */
+  .empathy{background:var(--paper-2)}
+  .empathy__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
+  .empathy__media{position:relative;aspect-ratio:4/5;overflow:hidden}
+  .empathy__media img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) brightness(.97)}
+  .empathy__media figcaption{position:absolute;left:14px;bottom:12px;font-family:var(--latin);font-style:italic;font-size:13px;letter-spacing:.06em;color:rgba(255,255,255,.85);text-shadow:0 1px 6px rgba(0,0,0,.5)}
+  .empathy__voice{font-family:var(--latin);font-style:italic;font-size:15px;color:var(--gold);letter-spacing:.06em;margin-bottom:20px}
+  .empathy__q{font-family:var(--mincho);font-weight:400;color:var(--ink-soft);font-size:clamp(20px,3.2vw,28px);line-height:1.95;letter-spacing:.04em}
+  .empathy__q b{display:block;font-weight:600;color:var(--green-deep);font-size:clamp(30px,6vw,52px);margin:.3em 0 .35em;letter-spacing:.02em}
+  .empathy__body{font-size:14.5px;color:var(--ink-soft);line-height:2.15;margin-top:30px;max-width:32em}
+  .empathy__body b{color:var(--green-dark);font-weight:500}
+
+  /* ===== REFRAME + POWERS (Spread 03, bold green) ===== */
+  .reframe__head{max-width:760px;margin-bottom:clamp(48px,7vw,84px)}
+  .reframe__title{font-family:var(--mincho);font-weight:500;font-size:clamp(28px,5.4vw,56px);line-height:1.6;letter-spacing:.05em;margin-bottom:28px}
+  .reframe__title .u{background:linear-gradient(transparent 60%,rgba(201,160,80,.5) 60%)}
+  .reframe__lead{color:rgba(247,243,234,.74);font-size:clamp(14px,2.3vw,16px);line-height:2.15;max-width:38em}
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.8vw,22px)}
+  .pcard{background:var(--paper);border-radius:18px;padding:clamp(24px,2.4vw,32px) clamp(20px,2vw,26px);
+    box-shadow:0 20px 44px rgba(0,0,0,.24);display:flex;flex-direction:column;transition:.35s var(--ease)}
+  .pcard:hover{transform:translateY(-6px);box-shadow:0 30px 56px rgba(0,0,0,.30)}
+  .pcard__h{font-family:var(--mincho);font-weight:600;font-size:clamp(20px,2.1vw,27px);color:var(--green-deep);letter-spacing:.05em;line-height:1.45}
+  .pcard__rule{height:2px;background:var(--gold);width:100%;margin:clamp(14px,1.5vw,18px) 0 clamp(16px,1.8vw,20px)}
+  .pcard__d{font-family:var(--mincho);font-size:clamp(13px,1.35vw,14.5px);color:var(--ink-soft);line-height:1.95;letter-spacing:.02em}
+  .pcard__doll{margin-top:auto;padding-top:clamp(18px,2vw,24px);text-align:right;font-family:var(--latin);font-style:italic;font-size:14px;color:var(--ink-faint);letter-spacing:.04em}
+  @media(max-width:900px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.pgrid{grid-template-columns:1fr}}
+
+  /* ===== SOAN (Spread 04, balanced photo) ===== */
+  .soan__grid{display:grid;grid-template-columns:1.1fr 1fr;gap:0;align-items:stretch;background:var(--green-deep);color:var(--paper)}
+  .soan__media{position:relative;min-height:380px}
+  .soan__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .soan__body{padding:clamp(48px,6vw,84px) clamp(32px,5vw,72px)}
+  .soan__title{font-family:var(--mincho);font-size:clamp(26px,3.6vw,42px);font-weight:600;color:var(--gold);letter-spacing:.08em;margin:6px 0 18px}
+  .soan__lead{color:rgba(247,243,234,.78);font-size:14.5px;line-height:2.1;margin-bottom:32px;max-width:30em}
+  .awards{list-style:none;border-top:1px solid rgba(232,201,122,.22);margin-bottom:30px}
+  .award{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 2px;border-bottom:1px solid rgba(232,201,122,.16);font-size:13.5px;line-height:1.5}
+  .award__name{color:rgba(247,243,234,.82)}
+  .award__prize{font-family:var(--mincho);color:var(--gold);font-weight:600;white-space:nowrap;letter-spacing:.04em}
+  @media(max-width:860px){.soan__grid{grid-template-columns:1fr}.soan__media{min-height:260px}}
+
+  /* ===== 進学実績 (career) ===== */
+  .career__grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(40px,6vw,88px);align-items:start;margin-top:clamp(36px,5vw,56px)}
+  .career__lead{font-size:14.5px;color:var(--ink-soft);line-height:2.05;max-width:26em;margin-bottom:clamp(30px,4vw,44px)}
+  .career__big{display:flex;align-items:baseline;gap:10px;padding-top:26px;border-top:1px solid var(--gold)}
+  .career__big b{font-family:var(--mincho);font-size:clamp(58px,9vw,96px);line-height:.85;color:var(--green-deep);font-weight:600;letter-spacing:.01em}
+  .career__big small{font-family:var(--gothic);font-size:13px;font-weight:500;color:var(--ink-soft);line-height:1.5}
+  .career__big small em{display:block;font-style:normal;font-family:var(--mincho);font-size:17px;color:var(--gold);font-weight:600;letter-spacing:.04em}
+  .career__cat{padding:18px 2px;border-bottom:1px solid rgba(28,68,51,.14)}
+  .career__cat:first-child{border-top:1px solid rgba(28,68,51,.14)}
+  .career__cat-label{display:inline-block;font-family:var(--gothic);font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--gold);background:rgba(201,160,80,.1);padding:4px 11px;border-radius:40px;margin-bottom:10px}
+  .career__schools{font-size:13.5px;color:var(--ink);line-height:1.85;letter-spacing:.01em}
+  @media(max-width:760px){.career__grid{grid-template-columns:1fr;gap:clamp(34px,7vw,44px)}.career__lead{max-width:34em}}
+
+  /* ===== OBJECTIONS (editorial Q&A) ===== */
+  .obj{display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,3vw,40px);padding:clamp(28px,4vw,44px) 0;border-top:1px solid rgba(28,68,51,.14)}
+  .obj:last-child{border-bottom:1px solid rgba(28,68,51,.14)}
+  .obj__mark{font-family:var(--latin);font-style:italic;font-size:clamp(30px,4vw,46px);color:var(--gold);line-height:1}
+  .obj__q{font-family:var(--mincho);font-size:clamp(17px,2.6vw,22px);font-weight:500;color:var(--green-deep);line-height:1.7;margin-bottom:14px;letter-spacing:.03em}
+  .obj__a{font-size:14.5px;color:var(--ink-soft);line-height:2.15;max-width:40em}
+  .obj__a b{color:var(--green-dark);font-weight:600;background:linear-gradient(transparent 62%,rgba(201,160,80,.28) 62%)}
+
+  /* ===== TRANSITIONAL FULL-BLEED PHOTO (interlude) ===== */
+  .band{position:relative;height:clamp(340px,50vw,520px);overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--green-deep)}
+  .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .band__img[data-r]{opacity:0;transform:scale(1.08);transition:opacity 1.2s var(--ease),transform 1.7s var(--ease)}
+  .band__img[data-r].vis{opacity:1;transform:scale(1)}
+  .band::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(16,42,32,.5),rgba(16,42,32,.66))}
+  .band__inner{position:relative;z-index:2;text-align:center;padding:0 24px}
+  .band__kicker{display:inline-flex;align-items:center;gap:14px;font-family:var(--gothic);font-size:11.5px;font-weight:500;letter-spacing:.22em;color:var(--gold-light);margin-bottom:22px}
+  .band__kicker::before,.band__kicker::after{content:'';width:30px;height:1px;background:rgba(232,201,122,.55)}
+  .band__line{font-family:var(--mincho);color:var(--paper);font-size:clamp(21px,4vw,36px);font-weight:500;letter-spacing:.1em;text-align:center;line-height:1.8;text-shadow:0 2px 20px rgba(0,0,0,.45)}
+  .band__sub{margin-top:18px;font-family:var(--mincho);color:var(--gold-light);font-size:clamp(14px,2.6vw,17px);letter-spacing:.16em;text-shadow:0 2px 16px rgba(0,0,0,.45)}
+
+  /* ===== FINAL CTA ===== */
+  .final{background:var(--green-deep);color:var(--paper);text-align:center;position:relative;overflow:hidden}
+  .final__inner{position:relative;z-index:2;max-width:660px;margin:0 auto;padding:clamp(86px,12vw,150px) 24px}
+  .seal{width:108px;height:108px;margin:0 auto 34px;position:relative;display:grid;place-items:center}
+  .seal__ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(232,201,122,.4)}
+  .seal__ring--rot{inset:-8px;border-style:dashed;animation:spin 26s linear infinite}
+  .seal__txt{font-family:var(--mincho);color:var(--gold-light);font-size:12px;letter-spacing:.1em;line-height:1.5;text-align:center}
+  .seal__txt b{display:block;font-family:var(--latin);font-style:italic;font-size:34px;font-weight:500;color:#fff;letter-spacing:0}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .final__title{font-family:var(--mincho);font-weight:500;font-size:clamp(26px,5.4vw,46px);line-height:1.6;letter-spacing:.05em;margin-bottom:22px}
+  .final__title .u{background:linear-gradient(transparent 58%,rgba(201,160,80,.5) 58%)}
+  .final__sub{color:rgba(247,243,234,.8);font-size:clamp(14px,2.4vw,16px);line-height:2.1;margin-bottom:42px}
+  .final__sub b{color:var(--gold-light);font-weight:500}
+  .final__actions{display:flex;flex-direction:column;align-items:center;gap:18px}
+  .final__actions .btn--gold{width:100%;max-width:420px;justify-content:center}
+  .final__secondary{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 28px;margin-top:4px}
+  .final__trust{margin-top:26px;font-size:12px;color:rgba(247,243,234,.6);letter-spacing:.03em;display:inline-flex;align-items:center;gap:7px}
+  .final__trust svg{width:14px;height:14px;color:var(--gold-light)}
+
+  /* ===== EMBEDDED QUIZ (chapter 07) ===== */
+  #quiz{padding-bottom:clamp(28px,4vw,56px)}
+  .quiz__head{text-align:center;max-width:700px;margin:0 auto clamp(40px,6vw,64px)}
+  .quiz__head .seal{margin-bottom:30px}
+  .quiz__title{font-family:var(--mincho);font-weight:500;font-size:clamp(15px,4.6vw,38px);line-height:1.6;letter-spacing:.04em;white-space:nowrap;margin-bottom:20px}
+  .quiz__title .u{background:linear-gradient(transparent 58%,rgba(201,160,80,.5) 58%)}
+  .quiz__sub{color:rgba(247,243,234,.8);font-size:clamp(14px,2.4vw,16px);line-height:2.05}
+  .quiz__stage{max-width:600px;margin:0 auto}
+  .quiz__progress{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+  .quiz__progress .lab{font-family:var(--mincho);font-size:14px;color:var(--gold-light);letter-spacing:.12em}
+  .quiz__progress .pct{font-family:var(--latin);font-style:italic;font-size:17px;color:rgba(247,243,234,.6)}
+  .quiz__bar{height:2px;background:rgba(232,201,122,.22);overflow:hidden;margin-bottom:clamp(24px,4vw,36px)}
+  .quiz__bar>i{display:block;height:100%;width:0;background:var(--gold);transition:width .6s var(--ease)}
+  .quiz__card{background:var(--paper);padding:clamp(30px,4.5vw,46px) clamp(24px,4vw,40px);border:1px solid rgba(232,201,122,.3);box-shadow:0 30px 70px rgba(0,0,0,.32);animation:qfade .5s var(--ease) both}
+  @keyframes qfade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  .quiz__num{font-family:var(--latin);font-style:italic;font-size:18px;color:var(--gold);letter-spacing:.08em;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+  .quiz__num::before{content:'';width:26px;height:1px;background:var(--gold)}
+  .quiz__question{font-family:var(--mincho);font-size:clamp(18px,3vw,24px);font-weight:500;color:var(--green-deep);line-height:1.7;letter-spacing:.03em;margin-bottom:clamp(22px,3vw,30px)}
+  .quiz__answers{display:flex;flex-direction:column;gap:11px}
+  .qopt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:var(--paper-2);border:1px solid rgba(28,68,51,.16);padding:16px 20px;font-family:var(--gothic);font-size:14.5px;color:var(--ink);line-height:1.6;cursor:pointer;transition:.22s var(--ease);-webkit-tap-highlight-color:transparent}
+  .qopt:hover{border-color:var(--gold);background:#fff;transform:translateX(4px)}
+  .qopt .tick{flex:none;width:20px;height:20px;border-radius:50%;border:1px solid var(--ink-faint);display:grid;place-items:center;transition:.2s}
+  .qopt .tick::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--gold);transform:scale(0);transition:transform .2s}
+  .qopt:hover .tick{border-color:var(--gold)}
+  .qopt.sel{background:var(--green-dark);border-color:var(--green-dark);color:var(--paper)}
+  .qopt.sel .tick{border-color:var(--paper)}
+  .qopt.sel .tick::after{background:var(--paper);transform:scale(1)}
+  .qopt:disabled{cursor:default}
+  .qopt:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  .quiz__result{display:none;max-width:600px;margin:0 auto;text-align:center;scroll-margin-top:90px;animation:qpop .55s var(--ease) both}
+  .quiz__result.show{display:block}
+  @keyframes qpop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+  .quiz__ricon{width:84px;height:84px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(232,201,122,.5);color:var(--gold-light);background:rgba(232,201,122,.06)}
+  .quiz__ricon svg{width:40px;height:40px}
+  .quiz__rfit{font-family:var(--mincho);font-size:14px;color:var(--gold-light);letter-spacing:.14em;margin-bottom:12px}
+  .quiz__rtype{font-family:var(--mincho);font-size:clamp(24px,4.4vw,36px);font-weight:600;color:var(--paper);letter-spacing:.05em;margin-bottom:18px}
+  .quiz__rdesc{color:rgba(247,243,234,.82);font-size:14.5px;line-height:2.15;text-align:left;max-width:34em;margin:0 auto clamp(28px,4vw,38px)}
+  .quiz__teaser{display:flex;flex-direction:column;gap:8px;align-items:center;border:1px dashed rgba(232,201,122,.5);padding:22px 24px;margin-bottom:clamp(28px,4vw,38px);background:rgba(255,255,255,.04)}
+  .quiz__teaser strong{font-family:var(--mincho);color:var(--gold-light);font-size:15px;font-weight:600;letter-spacing:.04em;display:flex;align-items:center;gap:8px}
+  .quiz__teaser strong svg{width:16px;height:16px}
+  .quiz__teaser span{font-size:13px;color:rgba(247,243,234,.72);line-height:1.85}
+  .quiz__ractions{display:flex;flex-direction:column;align-items:center;gap:18px}
+  .quiz__ractions .btn--gold{width:100%;max-width:420px;justify-content:center}
+  .quiz__keyhint{font-size:12.5px;color:rgba(247,243,234,.72);line-height:1.75;max-width:420px;margin:-6px auto 0}
+  .quiz__keyhint b{color:var(--gold-light);font-weight:600;letter-spacing:.04em}
+  .quiz__restart{background:none;border:none;color:rgba(247,243,234,.6);font-family:var(--gothic);font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:6px}
+  .quiz__restart:hover{color:var(--gold-light)}
+
+  /* curiosity-gap: blurred locked preview */
+  .quiz__locked{position:relative;max-width:34em;margin:0 auto clamp(20px,3vw,28px);padding:20px 22px;border:1px solid rgba(232,201,122,.28);background:rgba(255,255,255,.035);overflow:hidden}
+  .quiz__locked-quote{font-family:var(--mincho);color:var(--paper);font-size:15px;line-height:1.95;text-align:center;letter-spacing:.04em;filter:blur(5px);opacity:.85;user-select:none;pointer-events:none;margin:0}
+  .quiz__locked-badge{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:7px;background:var(--gold);color:#33260a;font-family:var(--gothic);font-size:12px;font-weight:700;letter-spacing:.06em;padding:8px 16px;border-radius:40px;white-space:nowrap;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+  .quiz__locked-badge svg{width:13px;height:13px}
+  /* unlock checklist */
+  .quiz__teaser .quiz__unlocks{list-style:none;text-align:left;display:flex;flex-direction:column;gap:10px;margin-top:6px;width:100%;max-width:30em}
+  .quiz__unlocks li{position:relative;padding-left:26px;font-size:13px;color:rgba(247,243,234,.84);line-height:1.75}
+  .quiz__unlocks li b{color:var(--gold-light);font-weight:600}
+  .quiz__unlocks li::before{content:'';position:absolute;left:3px;top:.5em;width:11px;height:6px;border-left:1.6px solid var(--gold-light);border-bottom:1.6px solid var(--gold-light);transform:rotate(-45deg)}
+  @media(prefers-reduced-motion:reduce){.quiz__card,.quiz__result{animation:none!important}}
+
+  /* ===== FOOTER ===== */
+  .footer{background:var(--green-deep);color:var(--paper);border-top:1px solid rgba(232,201,122,.18);text-align:center;padding:clamp(32px,5vw,48px) 24px 40px}
+  .footer__logo{font-family:var(--mincho);font-size:20px;font-weight:500;letter-spacing:.08em;margin-bottom:8px}
+  .footer__tag{font-family:var(--latin);font-style:italic;font-size:14px;color:var(--gold-light);letter-spacing:.08em;margin-bottom:26px}
+  .footer__links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-bottom:24px;font-size:12.5px}
+  .footer__links a{color:rgba(247,243,234,.78);text-decoration:none;transition:color .2s}
+  .footer__links a:hover{color:var(--gold-light)}
+  .footer__addr{font-size:12px;color:rgba(247,243,234,.55);line-height:1.9;margin-bottom:22px}
+  .footer__addr a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(232,201,122,.3);transition:color .2s,border-color .2s}
+  .footer__addr a:hover{color:var(--gold-light);border-color:var(--gold-light)}
+  .footer__copy{font-family:var(--latin);font-size:12px;color:rgba(247,243,234,.38);border-top:1px solid rgba(247,243,234,.1);padding-top:20px;letter-spacing:.04em}
+
+  /* ===== STICKY MOBILE CTA ===== */
+  .mcta{position:fixed;left:0;right:0;bottom:0;z-index:95;display:none;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--green-deep);border-top:1px solid rgba(232,201,122,.22);box-shadow:0 -6px 22px rgba(0,0,0,.28)}
+  .mcta a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:40px;font-size:14px;font-weight:700;text-decoration:none;letter-spacing:.03em;line-height:1}
+  .mcta .mc-quiz{background:var(--gold);color:#33260a;flex:1.35}
+  .mcta .mc-line{background:var(--line-green);color:#fff}
+  .mcta svg{width:18px;height:18px;flex:none}
+
+  /* ===== REVEAL ===== */
+  [data-r]{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  [data-r="l"]{transform:translateX(-30px)}
+  [data-r="r"]{transform:translateX(30px)}
+  [data-r].vis{opacity:1;transform:none}
+  [data-stagger]>*{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  [data-stagger].vis>*{opacity:1;transform:none}
+  [data-stagger].vis>*:nth-child(2){transition-delay:.1s}
+  [data-stagger].vis>*:nth-child(3){transition-delay:.2s}
+  [data-stagger].vis>*:nth-child(4){transition-delay:.3s}
+  [data-stagger].vis>*:nth-child(5){transition-delay:.4s}
+  .d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:880px){
+    .orient__grid,.empathy__grid{grid-template-columns:1fr;gap:40px}
+    .empathy__media{aspect-ratio:16/10}
+    /* mobile hero = full-bleed photo + overlaid text */
+    .hero{padding:0;min-height:100svh;align-items:flex-end}
+    .hero__grid{grid-template-columns:1fr;gap:0}
+    .hero__media{position:absolute;inset:0;min-height:0;margin:0;z-index:0}
+    .hero__media[data-r="l"]{transform:none}
+    .hero__media img{object-position:75% center}
+    .hero__media::after{background:linear-gradient(to bottom,rgba(16,42,32,.22) 0%,rgba(16,42,32,.06) 28%,rgba(16,42,32,.58) 70%,rgba(16,42,32,.9) 100%);mix-blend-mode:normal}
+    .hero__mediaframe,.hero__vert{display:none}
+    .hero__copy{position:relative;z-index:2;padding:0 0 calc(78px + env(safe-area-inset-bottom))}
+    .hero__eyebrow{color:var(--gold-light)}
+    .hero h1{color:#fff;text-shadow:0 2px 22px rgba(0,0,0,.5)}
+    .hero h1 .q{color:var(--gold-light)}
+    .hero h1 .small{color:rgba(255,255,255,.92)}
+    .hero__lead{color:rgba(255,255,255,.92);text-shadow:0 1px 12px rgba(0,0,0,.5);white-space:normal;font-size:clamp(14px,3.6vw,16px);max-width:34em}
+    .hero__lead b{color:#fff}
+    .hero__cap{color:rgba(255,255,255,.8)}
+  }
+  @media(max-width:880px){
+    .mcta{display:flex}
+    .footer{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+    .hero__scroll{display:none}
+    .nav__cta{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+    [data-r],[data-stagger]>*{opacity:1!important;transform:none!important}
+  }
+</style>
+<noscript><style>[data-r],[data-stagger]>*{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <a class="nav__logo" href="https://www.saniku.ac.jp/hiroshima/request/" target="_blank" rel="noopener">広島三育学院 中学校・高等学校<small>Hiroshima Saniku Gakuin</small></a>
+  <a class="nav__cta" href="#quiz">相性診断をはじめる <span aria-hidden="true">→</span></a>
+</nav>
+
+<!-- ===== 01 — HERO ===== -->
+<header class="hero" id="main">
+  <div class="col">
+    <div class="hero__grid">
+      <div class="hero__copy" data-r>
+        <span class="hero__eyebrow">Hiroshima Saniku Gakuin — 全寮制</span>
+        <h1 class="min">偏差値の先にある<br><span class="q">「生きる力」</span>を。
+          <span class="small">広島の山あいに立つ、<br>全寮制のキリスト教学校。</span>
+        </h1>
+        <p class="hero__lead"><span class="ln">成績ではなく、<b>どう生きるか</b>で選ぶ学校です。</span><span class="ln">まずは、お子さんと三育の「相性」を確かめてみませんか？</span></p>
+        <div class="hero__cta-row">
+          <a class="btn btn--fill" href="#quiz">お子さんとの相性を診断する <span class="arr" aria-hidden="true">→</span></a>
+          <span class="hero__cap">5つの質問・約30秒<br>結果はLINEで受け取れます</span>
+        </div>
+      </div>
+
+      <figure class="hero__media" data-r="l" style="transition-delay:.15s">
+        <img src="images/hero%20copy.jpg" alt="広島の山あいに立つ広島三育学院のキャンパス" />
+        <span class="hero__mediaframe" aria-hidden="true"></span>
+        <span class="hero__vert min" aria-hidden="true">生きるを、育む。</span>
+      </figure>
+    </div>
+  </div>
+  <span class="hero__scroll" aria-hidden="true"><i></i>Scroll</span>
+</header>
+
+<!-- ===== 02 — ORIENT (はじめに) ===== -->
+<section class="spread" id="about">
+  <div class="col">
+    <div class="chap" data-r>
+      <span class="chap__no">01</span><span class="chap__rule"></span>
+      <span class="chap__label"><span class="en">Introduction</span><span class="jp">はじめての方へ</span></span>
+    </div>
+    <div class="orient__grid">
+      <p class="orient__big min" data-r="l">広島三育学院は、<br><b>中学・高校の6年間を、寮で過ごす</b>キリスト教の学校です。</p>
+      <div class="orient__facts" data-r="r">
+        <div class="fact"><span class="fact__no">i</span><span class="fact__t min">全寮制・男女共学</span><span class="fact__d">24時間をともに暮らし、自分のことは自分でできるようになる。</span></div>
+        <div class="fact"><span class="fact__no">ii</span><span class="fact__t min">中学・高校（6年）</span><span class="fact__d">思春期の6年間を、一貫した環境でじっくりと育てる。</span></div>
+        <div class="fact"><span class="fact__no">iii</span><span class="fact__t min">広島県三原市の自然の中</span><span class="fact__d">山あいの静かな環境で、土と人に触れながら学ぶ。</span></div>
+        <div class="fact"><span class="fact__no">iv</span><span class="fact__t min">キリスト教の全人教育</span><span class="fact__d">知性・身体性・霊性・社会性。人としての根っこを育てる。</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 — EMPATHY ===== -->
+<section class="spread empathy">
+  <div class="col">
+    <div class="chap" data-r>
+      <span class="chap__no">02</span><span class="chap__rule"></span>
+      <span class="chap__label"><span class="en">A Parent's Voice</span><span class="jp">ある保護者の本音</span></span>
+    </div>
+    <div class="empathy__grid">
+      <figure class="empathy__media" data-r="l">
+        <img src="images/img-toi.jpg" alt="夕暮れの坂道を歩く生徒たち" />
+        <figcaption>— dusk on the hill</figcaption>
+      </figure>
+      <div data-r="r">
+        <p class="empathy__voice">“ I wondered if it was alright. ”</p>
+        <p class="empathy__q min">このままで、<b>「大丈夫かな。」</b>そう感じたこと、ありませんか。</p>
+        <p class="empathy__body">ゲームやスマホばかり。勉強への意欲も、なかなか見えてこない。──多くの保護者の方が、同じ不安を抱えながら、この学校にたどり着きます。広島三育学院は、お子さんが<b>「自分の足で立つ」</b>ことを学ぶ場所です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 — REFRAME + POWERS (bold green) ===== -->
+<section class="spread spread--green">
+  <div class="col">
+    <div class="chap chap--light" data-r>
+      <span class="chap__no">03</span><span class="chap__rule"></span>
+      <span class="chap__label"><span class="en">Our Education</span><span class="jp">三育の全人教育</span></span>
+    </div>
+    <div class="reframe__head">
+      <h2 class="reframe__title min" data-r>偏差値より先に、<br><span class="u">人として育てたい。</span></h2>
+      <p class="reframe__lead d1" data-r>情報があふれ、AIが答えを出す時代。必要なのは“スペック”ではなく、「自分はどう生きるか」を内側から問い続けられる、ブレない軸。三育はこの4つの力で、その軸を育てます。</p>
+    </div>
+    <div class="pgrid" data-stagger>
+      <div class="pcard">
+        <span class="pcard__h min">問いを立て、<br>動かす力</span>
+        <span class="pcard__rule"></span>
+        <span class="pcard__d">正解のない時代に、自分で問いを見つけ、考え、社会に働きかける力。</span>
+      </div>
+      <div class="pcard">
+        <span class="pcard__h min">生命を感じ、<br>つくる力</span>
+        <span class="pcard__rule"></span>
+        <span class="pcard__d">土を触り、食を作り、自然の中で全身で学ぶ。画面の外にある本物の体験。</span>
+      </div>
+      <div class="pcard">
+        <span class="pcard__h min">根っこを<br>育てる力</span>
+        <span class="pcard__rule"></span>
+        <span class="pcard__d">すでに受け取っているという贈与感覚を土台に、なぜ生きるかを問い続けるブレない軸をつくる。</span>
+      </div>
+      <div class="pcard">
+        <span class="pcard__h min">共に生き、<br>共に変える力</span>
+        <span class="pcard__rule"></span>
+        <span class="pcard__d">多世代・多様な他者と寝食を共にし、他者のために生きることを内側から選べる力。</span>
+        <span class="pcard__doll">Do for Others</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 — SOAN ===== -->
+<section id="soan">
+  <div class="col" style="padding-top:clamp(86px,12vw,150px);padding-bottom:clamp(44px,6vw,72px)">
+    <div class="chap" data-r>
+      <span class="chap__no">04</span><span class="chap__rule"></span>
+      <span class="chap__label"><span class="en">Experiential Learning</span><span class="jp">体験学習</span></span>
+    </div>
+  </div>
+  <div class="soan__grid">
+    <figure class="soan__media" data-r="l">
+      <img src="images/img-soan.jpg" alt="ソアンプロジェクトで地域と関わりながら活動する生徒たち" />
+    </figure>
+    <div class="soan__body" data-r="r">
+      <span class="hero__eyebrow" style="color:var(--gold-light)">各方面で高評価</span>
+      <h3 class="soan__title min">ソアンプロジェクト</h3>
+      <p class="soan__lead">農業、地域、人との関わり。生徒が自ら問いを立て、現実の社会に働きかける体験学習。教科書の外にある「語れる体験」が、受験にも、その先の人生にも活きていきます。</p>
+      <ul class="awards">
+        <li class="award"><span class="award__name">広島空港主催プロポーザル大会 2024</span><span class="award__prize min">最優秀賞</span></li>
+        <li class="award"><span class="award__name">大阪大学 いのちジュニアEXPO 2025</span><span class="award__prize min">金賞・銅賞</span></li>
+        <li class="award"><span class="award__name">第15回 キャリア教育アワード</span><span class="award__prize min">最優秀賞・大賞</span></li>
+      </ul>
+      <a class="btn btn--text-light" href="https://hsg-edu.note.jp/m/m5180f2b08236" target="_blank" rel="noopener">活動の様子を読む <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 — 進学実績 ===== -->
+<section class="spread spread--tight spread--paper2">
+  <div class="col">
+    <div class="chap" data-r>
+      <span class="chap__no">05</span><span class="chap__rule"></span>
+      <span class="chap__label"><span class="en">Where They Go</span><span class="jp">進学実績</span></span>
+    </div>
+    <div class="career__grid">
+      <div data-r>
+        <p class="career__lead">大学入試をゴールにしません。寮生活や課外活動で得た「語れる体験」を武器に、一人ひとりが自分の進路を選び取っていきます。生徒1人に約4〜5名の教職員が関わる、進路相談というより人生相談。</p>
+        <div class="career__big">
+          <b class="min">8<small style="font-size:.6em">割</small></b>
+          <small>が<br><em>年内に大学合格</em></small>
+        </div>
+      </div>
+      <div data-stagger>
+        <div class="career__cat" data-r><span class="career__cat-label">文系・リベラルアーツ</span><p class="career__schools">国際基督教大・教養学部 / 慶應義塾大・環境情報学部 / 国際教養大 / 関西学院大・法学部 / 青山学院大・文学部 / 同志社女子大・生活学部</p></div>
+        <div class="career__cat" data-r><span class="career__cat-label">医療系</span><p class="career__schools">東北大・薬学部 / 星薬科大・薬学部 / 東海大・医学部看護学科 / 三育大・看護学部</p></div>
+        <div class="career__cat" data-r><span class="career__cat-label">理工系</span><p class="career__schools">東京理科大 / 工学院大 / 東京農業大 / 高知工科大</p></div>
+        <div class="career__cat" data-r><span class="career__cat-label">体育・芸術系</span><p class="career__schools">日本大・芸術学部 / 多摩美術大 / 昭和音楽大 / 大阪体育大</p></div>
+        <div class="career__cat" data-r><span class="career__cat-label">留学・専門</span><p class="career__schools">Southern Adventist University / Andrews University ほか</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 — OBJECTIONS ===== -->
+<section class="spread">
+  <div class="col">
+    <div class="chap" data-r>
+      <span class="chap__no">06</span><span class="chap__rule"></span>
+      <span class="chap__label"><span class="en">Your Concerns</span><span class="jp">保護者の不安に</span></span>
+    </div>
+    <h2 class="reframe__title min" style="color:var(--green-deep);max-width:14em;margin-bottom:clamp(36px,5vw,60px)" data-r>その心配、<br>一つずつお答えします。</h2>
+    <div data-stagger>
+      <div class="obj">
+        <span class="obj__mark">Q.</span>
+        <div>
+          <p class="obj__q min">「うちの子、勉強が得意なほうじゃなくて……」</p>
+          <p class="obj__a">三育の入試は、<b>偏差値で合否を決めません。</b>本人・保護者との面談と作文で、「どう生きたいか」という価値観を見ます。いまの成績は、出発点を決めるものではありません。</p>
+        </div>
+      </div>
+      <div class="obj">
+        <span class="obj__mark">Q.</span>
+        <div>
+          <p class="obj__q min">「全寮制って、本人がやっていけるか心配……」</p>
+          <p class="obj__a">まずは<b>1泊からの寮体験</b>ができます。24時間、教員と先輩がすぐ隣に。最初からうまくいく子はいません。それでも少しずつ、自分のことを自分でできるようになっていきます。</p>
+        </div>
+      </div>
+      <div class="obj">
+        <span class="obj__mark">Q.</span>
+        <div>
+          <p class="obj__q min">「正直、費用のことも気になります……」</p>
+          <p class="obj__a">「恩おくり奨学金」をはじめ、<b>複数の奨学金制度</b>があります。安心してご検討いただけるよう、費用のご相談も承っています。まずは気軽にお尋ねください。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRANSITIONAL BAND ===== -->
+<section class="band bleed">
+  <img class="band__img" src="images/img-closing.jpg" alt="外のテーブルで語り合う生徒たち" data-r />
+  <div class="band__inner" data-r="scale">
+    <span class="band__kicker">決める、その前に</span>
+    <p class="band__line min">迷っているのは、真剣に<br>考えている証拠です。</p>
+    <p class="band__sub min">まずは、知ることから。</p>
+  </div>
+</section>
+
+<!-- ===== 07 — EMBEDDED QUIZ ===== -->
+<section class="spread spread--green" id="quiz">
+  <div class="col">
+    <div class="chap chap--light" data-r>
+      <span class="chap__no">07</span><span class="chap__rule"></span>
+      <span class="chap__label"><span class="en">Compatibility</span><span class="jp">相性診断</span></span>
+    </div>
+
+    <div class="quiz__head" data-r>
+      <h2 class="quiz__title min">見学の前に、まずは<span class="u">「相性」だけ。</span></h2>
+      <p class="quiz__sub">5つの質問でわかる、お子さんと広島三育学院の相性。<br>くわしい結果と、同じタイプの在校生の話は、LINEでお届けします。</p>
+    </div>
+
+    <div class="quiz__stage" id="quizStage" data-r>
+      <div class="quiz__progress">
+        <span class="lab min" id="qLabel">問 01 ／ 05</span>
+        <span class="pct" id="qPct">0%</span>
+      </div>
+      <div class="quiz__bar"><i id="qFill"></i></div>
+      <div class="quiz__card" id="qCard">
+        <div class="quiz__num" id="qNum">Question 01</div>
+        <div class="quiz__question min" id="qQuestion"></div>
+        <div class="quiz__answers" id="qAnswers" role="group" aria-label="回答の選択肢"></div>
+      </div>
+    </div>
+
+    <div class="quiz__result" id="qResult" role="status" aria-live="polite">
+      <div class="quiz__ricon" id="qRicon" aria-hidden="true"></div>
+      <div class="quiz__rfit" id="qRfit"></div>
+      <div class="quiz__rtype min" id="qRtype"></div>
+      <p class="quiz__rdesc" id="qRdesc"></p>
+
+      <div class="quiz__locked" aria-hidden="true">
+        <p class="quiz__locked-quote" id="qLocked"></p>
+        <span class="quiz__locked-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          続きはLINEで
+        </span>
+      </div>
+
+      <div class="quiz__teaser">
+        <strong>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 9.9-1"/><rect x="3" y="11" width="18" height="11" rx="2"/></svg>
+          LINEで受け取れる、4つのこと
+        </strong>
+        <ul class="quiz__unlocks">
+          <li id="qUnlock1">この子が、三育で<b>どう変わったか</b>（同じタイプの在校生の実話）</li>
+          <li>お子さんに合った、見学・体験の<b>“入口”</b></li>
+          <li>寮での一日と、気になる<b>費用・奨学金</b>のこと</li>
+          <li>気になることは、スタッフが<b>直接お答え</b>します</li>
+        </ul>
+      </div>
+
+      <div class="quiz__ractions">
+        <a class="btn btn--gold" id="qLine" href="https://lin.ee/8pkHzdh" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="24" height="24" rx="5.5" fill="#06C755"/><path fill="#fff" fill-rule="evenodd" transform="translate(4.3 4.1) scale(.645)" d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          続きと在校生の話を、LINEで受け取る
+        </a>
+        <p class="quiz__keyhint" id="qKeyHint"></p>
+        <div class="final__secondary">
+          <a class="btn btn--text-light" href="https://www.saniku.ac.jp/hiroshima/news/001722.php" target="_blank" rel="noopener">見学・説明会の日程を見る</a>
+          <button class="quiz__restart" type="button" id="qRestart">もう一度診断する</button>
+        </div>
+        <span class="final__trust">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          登録は無料。しつこい連絡はしません。
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p class="footer__logo min">広島三育学院 中学校・高等学校</p>
+  <p class="footer__tag">Do for Others in Christ</p>
+  <div class="footer__links">
+    <a href="https://www.saniku.ac.jp/hiroshima/request/" target="_blank" rel="noopener">学校について詳しく</a>
+    <a href="#quiz">相性診断</a>
+    <a href="https://www.saniku.ac.jp/hiroshima/request/" target="_blank" rel="noopener">資料請求・お問い合わせ</a>
+    <a href="https://lin.ee/8pkHzdh" target="_blank" rel="noopener">LINEで相談</a>
+  </div>
+  <p class="footer__addr"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%BA%83%E5%B3%B6%E4%B8%89%E8%82%B2%E5%AD%A6%E9%99%A2%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E4%B8%89%E5%8E%9F%E5%B8%82%E5%A4%A7%E5%92%8C%E7%94%BA%E4%B8%8B%E5%BE%B3%E8%89%AF296-2" target="_blank" rel="noopener">〒729-1406 広島県三原市大和町下徳良296-2</a> ／ Tel: <a href="tel:0847330311">0847-33-0311</a></p>
+  <p class="footer__copy">© 2026 Hiroshima Saniku Gakuin. All rights reserved.</p>
+</footer>
+
+<!-- ===== STICKY MOBILE CTA ===== -->
+<div class="mcta" aria-label="相性診断・LINE相談">
+  <a class="mc-quiz" href="#quiz">30秒で相性診断 →</a>
+  <a class="mc-line" href="https://lin.ee/8pkHzdh" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="24" height="24" rx="5.5" fill="#fff"/><path fill="#06C755" fill-rule="evenodd" transform="translate(4.3 4.1) scale(.645)" d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    LINE相談
+  </a>
+</div>
+
+<script>
+  // ===== Scroll reveal =====
+  (function(){
+    var els=document.querySelectorAll('[data-r],[data-stagger]');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vis')});return;}
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target);}});
+    },{threshold:.14,rootMargin:'0px 0px -50px 0px'});
+    els.forEach(function(e){io.observe(e);});
+    document.querySelectorAll('.hero [data-r]').forEach(function(e){setTimeout(function(){e.classList.add('vis');},160);});
+  })();
+  // ===== Nav hide on scroll-down =====
+  (function(){
+    var nav=document.getElementById('nav'),last=0;
+    addEventListener('scroll',function(){
+      var y=scrollY;
+      nav.style.transform=(y>last&&y>320)?'translateY(-100%)':'translateY(0)';
+      last=y;
+    },{passive:true});
+  })();
+
+  // ===== Embedded diagnosis quiz =====
+  (function(){
+    "use strict";
+    var LINE_URL='https://lin.ee/8pkHzdh';
+    var ICONS={
+      mountain:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>',
+      book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>',
+      users:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+      sprout:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>'
+    };
+    var questions=[
+      { text:'お子さんの学校での様子に、いちばん近いのは？', answers:[
+        { label:'授業中は、静かに話を聞くのが得意', type:'conventional' },
+        { label:'座っているより、動きながら学びたい', type:'explorer' },
+        { label:'自分のペースで、じっくり深く考えたい', type:'thinker' },
+        { label:'友達と一緒に、何かを作るのが好き', type:'collaborator' } ] },
+      { text:'お子さんがいちばん生き生きしているのは、どんな時ですか？', answers:[
+        { label:'テストで、いい点が取れた時', type:'conventional' },
+        { label:'自然の中や、体を動かしている時', type:'explorer' },
+        { label:'本を読んだり、一人で考えている時', type:'thinker' },
+        { label:'誰かのために、何かをしてあげられた時', type:'collaborator' } ] },
+      { text:'いまの学校環境に、感じている物足りなさは？', answers:[
+        { label:'とくに不満はない', type:'conventional' },
+        { label:'外で体験する機会が、少ない', type:'explorer' },
+        { label:'自分のペースで、学べない', type:'thinker' },
+        { label:'もっとチームで取り組む場面が、ほしい', type:'collaborator' } ] },
+      { text:'保護者として、お子さんにいちばん身につけてほしいことは？', answers:[
+        { label:'確かな学力と、進学実績', type:'conventional' },
+        { label:'たくましさと、自立心', type:'explorer' },
+        { label:'深く考え、自分の意見を持つ力', type:'thinker' },
+        { label:'人と協力し、社会に貢献する力', type:'collaborator' } ] },
+      { text:'全寮制の暮らしについて、いまの率直な気持ちは？', answers:[
+        { label:'正直、少し心配', type:'conventional' },
+        { label:'自立できそうで、いいと思う', type:'explorer' },
+        { label:'一人の時間も持てるなら、良さそう', type:'thinker' },
+        { label:'仲間と暮らすのは、良い経験になりそう', type:'collaborator' } ] }
+    ];
+    var results={
+      explorer:{ icon:ICONS.mountain, fit:'三育との相性 ── 力を発揮しやすい', type:'冒険・行動タイプ', short:'冒険・行動', key:'冒険',
+        desc:'お子さんは、教室の外でこそ輝くタイプ。体験から学び、自分の手と足で世界を理解していきます。実は、こういう子ほど、三育に来てから大きく変わります。',
+        locked:'入学前は「挑戦することから逃げてばかりだった」という先輩が、いまでは——' },
+      thinker:{ icon:ICONS.book, fit:'三育との相性 ── 環境がよく合う', type:'深く考える探究タイプ', short:'深く考える探究', key:'探究',
+        desc:'お子さんは、じっくり考え、自分なりの答えを見つけることが得意なタイプ。三育は、正解を覚えるより「問いを立てる力」を育てる場所。その力が、ここでよく育ちます。',
+        locked:'「ぼーっとしがちだった」先輩が、三育で“自分から考える”ようになった理由とは——' },
+      collaborator:{ icon:ICONS.users, fit:'三育との相性 ── 伸びしろが大きい', type:'人と共に育つ協働タイプ', short:'人と共に育つ協働', key:'協働',
+        desc:'お子さんは、誰かのために、誰かとともに動くとき、いきいきとするタイプ。寝食をともにする寮と、地域に関わるソアンプロジェクト。その力が育つ環境が、ここにあります。',
+        locked:'「人のために動くのが当たり前になった」と語る先輩の、入学前の意外な姿とは——' },
+      conventional:{ icon:ICONS.sprout, fit:'三育との相性 ── まずは知ることから', type:'まだ迷っている、あなたへ', short:'じっくり見極めたい', key:'見極め',
+        desc:'いまの環境に大きな不満はない。けれど、もっと良い道があるかもしれない——そんな段階かもしれません。三育は「成績ではなく、生き方で選ぶ学校」です。',
+        locked:'「スマホを手放したくない」と泣いた子が、いま、なんと言っているか——' }
+    };
+
+    var current=0, scores={explorer:0,thinker:0,collaborator:0,conventional:0};
+    var stage=document.getElementById('quizStage');
+    if(!stage) return;
+    var resultEl=document.getElementById('qResult');
+    var fill=document.getElementById('qFill'), label=document.getElementById('qLabel'), pct=document.getElementById('qPct');
+    var numEl=document.getElementById('qNum'), qEl=document.getElementById('qQuestion'), ansEl=document.getElementById('qAnswers');
+    var card=document.getElementById('qCard');
+    var pad=function(n){return n<10?'0'+n:''+n;};
+
+    function render(idx){
+      var q=questions[idx], p=Math.round(idx/questions.length*100);
+      numEl.textContent='Question '+pad(idx+1);
+      qEl.textContent=q.text;
+      label.textContent='問 '+pad(idx+1)+' ／ '+pad(questions.length);
+      pct.textContent=p+'%';
+      fill.style.width=p+'%';
+      ansEl.innerHTML='';
+      q.answers.forEach(function(a){
+        var b=document.createElement('button');
+        b.className='qopt'; b.type='button';
+        b.innerHTML='<span class="tick" aria-hidden="true"></span><span>'+a.label+'</span>';
+        b.addEventListener('click',function(){choose(a.type,b);});
+        ansEl.appendChild(b);
+      });
+    }
+    function choose(type,btn){
+      ansEl.querySelectorAll('.qopt').forEach(function(x){x.disabled=true;});
+      btn.classList.add('sel');
+      scores[type]++;
+      setTimeout(function(){
+        current++;
+        if(current<questions.length){
+          card.style.animation='none';
+          requestAnimationFrame(function(){card.style.animation=''; render(current);});
+        } else finish();
+      },420);
+    }
+    function finish(){
+      fill.style.width='100%';
+      label.textContent='完了';
+      pct.textContent='100%';
+      var winner=Object.keys(scores).reduce(function(a,b){return scores[b]>scores[a]?b:a;});
+      var r=results[winner];
+      document.getElementById('qRicon').innerHTML=r.icon;
+      document.getElementById('qRfit').textContent=r.fit;
+      document.getElementById('qRtype').textContent=r.type;
+      document.getElementById('qRdesc').textContent=r.desc;
+      document.getElementById('qLocked').textContent=r.locked;
+      document.getElementById('qUnlock1').innerHTML='この「'+r.short+'タイプ」の子が、三育で<b>どう変わったか</b>（在校生の実話）';
+      document.getElementById('qKeyHint').innerHTML='友だち追加のあと、トーク画面で <b>「'+r.key+'」</b> と送ると、結果の続きが届きます。';
+      document.getElementById('qLine').href=LINE_URL;
+      stage.style.display='none';
+      resultEl.classList.add('show');
+      requestAnimationFrame(function(){ resultEl.scrollIntoView({behavior:'smooth',block:'start'}); });
+    }
+    document.getElementById('qRestart').addEventListener('click',function(){
+      current=0; scores={explorer:0,thinker:0,collaborator:0,conventional:0};
+      resultEl.classList.remove('show');
+      stage.style.display='';
+      render(0);
+      var sec=document.getElementById('quiz');
+      if(sec) sec.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+    render(0);
+  })();
+</script>
+</body>
+</html>
