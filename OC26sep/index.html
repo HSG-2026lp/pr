@@ -137,8 +137,8 @@
   }
   .stamp{
     width:104px;height:104px;border-radius:50%;
-    border:3px solid var(--vermillion);
-    color:var(--vermillion);
+    border:3px solid var(--green-deep);
+    color:var(--green-deep);
     display:flex;align-items:center;justify-content:center;
     font-family:'Shippori Mincho B1',serif;font-weight:800;
     font-size:16.5px;line-height:1.35;
@@ -147,17 +147,9 @@
   }
   .cta-label{
     font-size:19px;font-weight:800;color:var(--green-deep);
-    margin:0 0 18px;letter-spacing:.03em;
+    margin:0 0 10px;letter-spacing:.03em;
   }
-  .cta-btn{
-    display:flex;align-items:center;justify-content:center;gap:8px;
-    width:100%;max-width:320px;
-    background:var(--vermillion);color:#FBEAE6;
-    font-weight:700;font-size:16px;
-    padding:16px;border-radius:10px;text-decoration:none;
-  }
-  .cta-btn::after{content:"›";font-size:19px;line-height:1;}
-  .cta-note{margin:14px 0 0;font-size:12px;color:var(--ink-soft);}
+  .cta-note{margin:14px 0 0;font-size:13px;color:var(--ink-soft);max-width:320px;}
 
   /* ---------- CONCEPT ---------- */
   .concept-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px;}
@@ -203,6 +195,30 @@
   .tl .content{padding-top:1px;}
   .tl .content b{display:block;font-size:14.5px;color:var(--ink);margin-bottom:2px;}
   .tl .content span{font-size:12.5px;color:var(--ink-soft);}
+
+  /* ---------- PROGRAM CARDS (illustrated) ---------- */
+  .program-cards{margin-top:22px;display:flex;flex-direction:column;gap:18px;}
+  .program-card{
+    background:var(--paper-2);border-radius:var(--radius);overflow:hidden;
+  }
+  .program-card img{width:100%;display:block;}
+  .program-card .pc-body{padding:16px 16px 18px;}
+  .program-card .pc-num{
+    font-family:'Shippori Mincho B1',serif;font-weight:800;color:var(--amber-deep);
+    font-size:13px;letter-spacing:.06em;margin-bottom:4px;display:block;
+  }
+  .program-card h3{margin:0 0 8px;font-size:15.5px;font-weight:700;color:var(--green-deep);}
+  .program-card p{margin:0;font-size:13px;color:var(--ink-soft);}
+  .program-card .pc-tag{
+    display:inline-block;font-size:11px;color:var(--sky);border:1px solid var(--sky);
+    border-radius:999px;padding:2px 10px;margin-top:8px;
+  }
+  .pc-split{margin-top:14px;display:flex;flex-direction:column;gap:12px;}
+  .pc-split .pc-block{border-top:1px solid var(--line);padding-top:12px;}
+  .pc-split .pc-block b.pc-audience{
+    display:block;font-size:12.5px;color:var(--green-deep);margin-bottom:4px;
+  }
+  .pc-split .pc-block p{font-size:13px;color:var(--ink-soft);margin:0;}
   .note-box{
     margin-top:6px;background:var(--paper-2);border-radius:var(--radius);padding:16px 16px;
     font-size:13px;color:var(--ink-soft);
@@ -316,10 +332,9 @@
   </section>
 
   <section class="cta-section" id="apply">
-    <div class="stamp">まだ<br>間に合う！</div>
-    <p class="cta-label serif">申し込み受付中！</p>
-    <a class="cta-btn" href="https://forms.gle/km8mTAfSCiv7oiBG9">申し込みフォームへ進む</a>
-    <p class="cta-note">フォームより必要事項をご入力ください</p>
+    <div class="stamp">受付<br>終了</div>
+    <p class="cta-label serif">申し込みは締め切りました</p>
+    <p class="cta-note">ご参加予定の皆様、当日を楽しみにお待ちしております。</p>
   </section>
 
   <section id="concept">
@@ -370,10 +385,42 @@
         <li><span class="dot"></span><div class="time">9:00〜</div><div class="content"><b>受付開始</b><span>宿泊体験にご参加の保護者の皆様も、9:00〜ご来校いただけます</span></div></li>
         <li><span class="dot"></span><div class="time">〜10:00</div><div class="content"><b>宿泊体験参加者向けプログラム</b><span>10:00までは宿泊体験ご参加の皆様対象の体験プログラムを実施</span></div></li>
         <li><span class="dot"></span><div class="time">10:00〜</div><div class="content"><b>オープニングセレモニー</b><span>ここからオープンキャンパスがスタートします</span></div></li>
+        <li><span class="dot"></span><div class="time">10:30〜</div><div class="content"><b>①高校生による活動紹介ブース</b><span>「ソアン」の活動を高校生が対話形式で紹介。高校生と一緒に校内を巡りながらご案内します（親子でご参加いただけます）</span></div></li>
+        <li><span class="dot"></span><div class="time">〜12:00頃</div><div class="content"><b>②中学生との交流会／寮見学会</b><span>お子様は中学生との交流会、保護者の皆様は高校生による寮見学会へ</span></div></li>
         <li><span class="dot"></span><div class="time">〜14:00頃</div><div class="content"><b>終了予定</b><span>各プログラムを体験いただいた後、順次終了となります</span></div></li>
       </ul>
       <div class="pillrow">
-        <span class="pill">寮体験</span><span class="pill">音楽発表</span><span class="pill">ソアン紹介ブース</span><span class="pill">レクリエーション</span><span class="pill">寮案内・個別相談会</span>
+        <span class="pill">寮体験</span><span class="pill">音楽発表</span><span class="pill">ソアン紹介ブース</span><span class="pill">中学生交流会</span><span class="pill">寮案内・個別相談会</span>
+      </div>
+
+      <div class="program-cards">
+        <div class="program-card">
+          <img src="booth.jpg" alt="高校生による「ソアン」活動紹介ブースの様子">
+          <div class="pc-body">
+            <span class="pc-num">PROGRAM 01</span>
+            <h3 class="serif">高校生による活動紹介ブース</h3>
+            <p>本校の特色教育である「ソアン」の活動について、高校生がブースを展開。対話形式で活動を紹介します。高校生と一緒に校内を巡りながらブースをご案内します。</p>
+            <span class="pc-tag">親子で参加可</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <img src="exchange.jpg" alt="中学生との交流会と保護者向け寮見学会の様子">
+          <div class="pc-body">
+            <span class="pc-num">PROGRAM 02</span>
+            <h3 class="serif">中学生との交流会／寮見学会</h3>
+            <div class="pc-split">
+              <div class="pc-block">
+                <b class="pc-audience">お子様対象</b>
+                <p>ブース見学の後は、お昼ご飯まで中学生と交流会！校舎内に隠れる高校生を見つけ出すことができるか！？</p>
+              </div>
+              <div class="pc-block">
+                <b class="pc-audience">保護者対象</b>
+                <p>高校生による男女寮見学会。お子様が1泊した寮を見学し、高校生が自分たちの言葉で紹介します。リアルな生活の様子をご覧いただけます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
