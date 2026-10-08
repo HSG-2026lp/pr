@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="広島三育学院 在校生保護者の声を集めた「寮生活の先輩ママ・パパの一言アドバイス集」">
+<title>先輩ママ・パパの一言アドバイス集</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* layout: 1カラムの冊子型。章ごとに「写真枠 → 見出し → 声」を繰り返し、声は手紙の便箋のように並べる */
+:root{
+  --bg:#fdfbf6; --paper:#ffffff; --ink:#3b2a14; --sub:#7d6a50; --line:#ebe4d5;
+  --forest:#a86a00; --forest-soft:#fff0c2; --sun:#ffc21a; --sun-soft:#fff3cc; --slot:#fbeecb; --on-sun:#3b2a14;
+  --display:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1d1810; --paper:#282117; --ink:#f5ecd9; --sub:#bfae90; --line:#43382a;
+  --forest:#f2c14e; --forest-soft:#3a2f17; --sun:#f0bb3a; --sun-soft:#3a3016; --slot:#322a1c; --on-sun:#3b2a14; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1d1810; --paper:#282117; --ink:#f5ecd9; --sub:#bfae90; --line:#43382a;
+  --forest:#f2c14e; --forest-soft:#3a2f17; --sun:#f0bb3a; --sun-soft:#3a3016; --slot:#322a1c; --on-sun:#3b2a14; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.9;padding-inline:20px;padding-block:0 64px}
+.wrap{max-width:760px;margin-inline:auto;display:flex;flex-direction:column;gap:72px}
+h1,h2,h3{font-family:var(--display);font-weight:700;text-wrap:balance;margin:0;line-height:1.45}
+p{margin:0}
+.mock{background:var(--sun-soft);border:1px dashed var(--sun);font-size:13px;line-height:1.7;padding:10px 14px;margin-top:16px}
+.photo{background:repeating-linear-gradient(135deg,var(--slot) 0 14px,var(--paper) 14px 28px);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end;padding:14px;max-width:100%;font-size:13px;line-height:1.6}
+.photo b{font-family:var(--body);letter-spacing:.12em;color:var(--forest)}
+.photo span{background:var(--paper);padding:2px 8px;align-self:flex-start;margin-top:4px}
+.r169{aspect-ratio:16/9}.r32{aspect-ratio:3/2}.r11{aspect-ratio:1/1}
+.hero{display:flex;flex-direction:column;gap:22px;padding-top:8px}
+.eyebrow{font-size:13px;letter-spacing:.14em;color:var(--forest);font-weight:700}
+.hero h1{font-size:clamp(30px,7vw,48px)}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62%)}
+.lead{color:var(--sub);max-width:34em}
+.event{border-top:2px solid var(--forest);border-bottom:1px solid var(--line);padding-block:14px;font-size:14px;display:grid;grid-template-columns:5em 1fr;gap:4px 12px}
+.event dt{color:var(--forest);font-weight:700}.event dd{margin:0;min-width:0}
+section{display:flex;flex-direction:column;gap:24px}
+.head{display:flex;flex-direction:column;gap:8px}
+.head h2{font-size:clamp(23px,5vw,30px)}
+.head p{color:var(--sub);font-size:15px}
+.bars{display:flex;flex-direction:column;gap:14px;background:var(--paper);padding:24px 20px;border:1px solid var(--line)}
+.bar{display:grid;grid-template-columns:1fr auto;gap:2px 12px;font-size:15px}
+.bar .n{font-variant-numeric:tabular-nums;font-weight:700;color:var(--forest)}
+.bar i{grid-column:1/-1;height:10px;background:var(--forest-soft);display:block}
+.bar i u{display:block;height:100%;background:var(--sun)}
+.note{font-size:12.5px;color:var(--sub)}
+.words{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.q{background:var(--paper);border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:10px;justify-content:space-between;min-width:0}
+.q p{font-family:var(--display);font-weight:500;font-size:17px;line-height:1.7}
+.q cite,.story cite,.adv cite{font-style:normal;font-size:12.5px;color:var(--sub)}
+.story{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:22px;align-items:start}
+.story>div{display:flex;flex-direction:column;gap:10px;min-width:0}
+.story h3{font-size:20px}
+.story p{font-size:15px}
+.shift{display:flex;flex-direction:column}
+.shift div{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr);gap:10px;align-items:center;padding-block:14px;border-bottom:1px solid var(--line);font-size:15px}
+.shift div span:first-child{color:var(--sub)}
+.shift div span:last-child{font-family:var(--display);font-weight:700;font-size:17px}
+.shift svg{width:28px;height:12px}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.pair>div{padding:18px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.worry{background:var(--paper);border:1px solid var(--line)}.now{background:var(--sun-soft)}
+.pair h3{font-size:16px;font-family:var(--body)}
+.pair ul{margin:0;padding-left:1.2em;font-size:15px}
+.adv{display:flex;flex-direction:column;gap:0}
+.adv blockquote{margin:0;padding:22px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.adv blockquote p{font-family:var(--display);font-weight:500;font-size:clamp(18px,4vw,22px);line-height:1.7}
+.adv blockquote.big p{font-size:clamp(22px,5.4vw,30px);font-weight:700}
+.tips{display:flex;flex-direction:column;gap:12px}
+.tips li{background:var(--paper);border:1px solid var(--line);padding:16px 18px;font-size:15px;list-style:none}
+.tips{padding:0;margin:0}
+.tips b{display:block;color:var(--forest)}
+.cta{background:var(--sun);color:var(--on-sun);padding:36px 24px;gap:18px;text-align:left}
+.cta h2{font-size:clamp(22px,5vw,28px)}
+.cta .btns{display:flex;flex-wrap:wrap;gap:12px}
+.cta a{background:var(--on-sun);color:#fffaeb;font-weight:700;padding:12px 22px;text-decoration:none}
+.cta a.ghost{background:transparent;color:var(--on-sun);border:1.5px solid var(--on-sun)}
+.cta a:focus-visible{outline:3px solid var(--on-sun);outline-offset:3px}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.6}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{color:var(--forest);white-space:nowrap}
+.tbl{overflow-x:auto;background:var(--paper);border:1px solid var(--line)}
+@media (max-width:600px){.story{grid-template-columns:1fr}}
+.ph{width:100%;display:block;object-fit:cover}
+.fig{margin:0}.fig figcaption{font-size:12.5px;color:var(--sub);text-align:right}
+.foot{border-top:1px solid var(--line);padding-top:24px;font-size:14px;display:flex;flex-direction:column;gap:4px}
+.foot a{color:var(--forest);font-weight:700}
+.q,.tips li,.cta a{transition:transform .25s ease,box-shadow .25s ease}
+.q:hover,.tips li:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(59,42,20,.12)}
+.cta a:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(59,42,20,.25)}
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease,box-shadow .25s ease}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.in.q:hover,.js .rv.in.tip:hover{transform:translateY(-4px)}
+.js .bars .bar i u{transform:scaleX(0);transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.js .bars.in .bar i u{transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv,.js .bars .bar i u{opacity:1;transform:none;transition:none}.q:hover,.tips li:hover,.cta a:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header class="hero">
+  <p class="eyebrow">広島三育学院 ／ 参加者特典</p>
+  <h1>寮生活の<em>先輩ママ・パパ</em>の<br>一言アドバイス集</h1>
+  <p class="lead">12歳、15歳でわが子を寮に送り出した保護者は、何が不安で、いま何を感じているのか。在校生の保護者が、これから入学を考えるご家庭に宛てて書いた言葉を集めました。</p>
+  <img class="ph r169" src="img/01.jpg" alt="寮の部屋の窓辺から、山並みを眺める二人の生徒">
+  <dl class="event">
+    <dt>イベント</dt><dd>全寮制で変わる、子どもの自立と親子の関わり方 〜広島三育学院 全寮制教育 実体験トーク＆交流会〜</dd>
+    <dt>日時</dt><dd>2026年10月12日（月・祝）</dd>
+    <dt>会場</dt><dd>東京</dd>
+  </dl>
+</header>
+
+<section>
+  <div class="head">
+    <p class="eyebrow">はじめに</p>
+    <h2>スマホ、勉強、友だち、進路。<br>悩みの入り口は、どのご家庭も同じでした。</h2>
+  </div>
+  <p>広島三育学院は、キリスト教教育を土台とした寮教育を50年間続けてきました。寮で暮らすのは子どもですが、変わるのは子どもだけではありません。このページでは、在校生保護者へのアンケートに寄せられた声を、できるだけそのままの言葉でご紹介します。</p>
+</section>
+
+<section>
+  <div class="head">
+    <p class="eyebrow">数字で見る</p>
+    <h2>入学後、お子さんの何が変わりましたか</h2>
+    <p>回答した保護者のうち、各項目を選んだ割合（複数選択）</p>
+  </div>
+  <div class="bars">
+    <div class="bar"><span>身の回りのことを、自分でするようになった</span><span class="n">84%</span><i><u style="width:84.2%"></u></i></div>
+    <div class="bar"><span>友人関係を、自分で築くようになった</span><span class="n">68%</span><i><u style="width:68.4%"></u></i></div>
+    <div class="bar"><span>自分で時間を管理するようになった</span><span class="n">63%</span><i><u style="width:63.2%"></u></i></div>
+    <div class="bar"><span>自分の考えや気持ちを、話すようになった</span><span class="n">63%</span><i><u style="width:63.2%"></u></i></div>
+    <div class="bar"><span>家族との会話が変わった</span><span class="n">47%</span><i><u style="width:47.4%"></u></i></div>
+    <div class="bar"><span>スマホ・ゲームとの付き合い方が変わった</span><span class="n">37%</span><i><u style="width:36.8%"></u></i></div>
+  </div>
+  <p class="note">2026年10月実施・在校生保護者アンケート。掲載許可のあった回答（中1〜高3の保護者）を集計（2026年10月8日現在）。</p>
+</section>
+
+<section>
+  <div class="head">
+    <p class="eyebrow">子どもの変化</p>
+    <h2>わが子の変化を、一言で表すと</h2>
+  </div>
+  <img class="ph r32" src="img/02.jpg" alt="寮で洗濯物を自分で干す生徒">
+  <div class="words">
+    <div class="q"><p>ゲームしか興味がなかった息子が、様々なことに意欲的になりました。</p><cite>高1保護者・母</cite></div>
+    <div class="q"><p>知らなかった長所を発見しました。</p><cite>高2保護者・母</cite></div>
+    <div class="q"><p>周りへの感謝の気持ちを表すようになりました。</p><cite>中3保護者・母</cite></div>
+    <div class="q"><p>精神的に強くなりました。</p><cite>高3保護者・母</cite></div>
+    <div class="q"><p>人前に立つことを嫌がらなくなった。</p><cite>高3保護者・父</cite></div>
+    <div class="q"><p>自分自身と向き合う力が大きくなった。</p><cite>高3保護者・母</cite></div>
+    <div class="q"><p>自分の将来を悩みながらも考えるようになった。</p><cite>高2保護者・母</cite></div>
+    <div class="q"><p>「お母さんにやってもらう」という前提が無くなりました。</p><cite>中1保護者・母</cite></div>
+    <div class="q"><p>電話で必ず「ありがとう」と言います。</p><cite>高1保護者・母</cite></div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <p class="eyebrow">エピソード</p>
+    <h2>その変化を感じた、ある日のこと</h2>
+  </div>
+  <article class="story">
+    <img class="ph r11" src="img/03.jpg" alt="寮の集会で、仲間の前に立って話す生徒">
+    <div>
+      <h3>引っ込み思案だった子が、礼拝で3年間の学びを語った</h3>
+      <p>小学校の頃は引っ込み思案で人影に隠れているような子でした。中学入学してすぐの5月頃、意外と人前で話すのが上手だと先生方が気づいてくださり、生徒代表のひとりとしてお話をしました。中学の卒業祈祷週では最終日の礼拝のお話を担当し、堂々とたくさんの人の前で話す姿を見て、親元にいたらできなかった成長だと思いました。</p>
+      <cite>高2保護者・母</cite>
+    </div>
+  </article>
+  <article class="story">
+    <img class="ph r11" src="img/04.jpg" alt="校舎の前の畑で土をならす生徒たち">
+    <div>
+      <h3>帰省した息子が、自分から床を拭き始めた</h3>
+      <p>以前は外食や旅行にも行きたがらなかった息子が、「何でもやってみる！」と言うようになりました。学校の山で採った渋柿で、友達に教えてもらいながら干し柿作りにも挑戦。帰省した時、自分から部屋の床を拭き始めたことにも驚きました。寮で普段からしているので苦ではないようです。</p>
+      <cite>高1保護者・母</cite>
+    </div>
+  </article>
+  <article class="story">
+    <img class="ph r11" src="img/05.jpg" alt="寮へ続く階段で言葉を交わす生徒たち">
+    <div>
+      <h3>「辞めたい」と言っていた子が、楽しい事探しを始めた</h3>
+      <p>入学後は人間関係や寮の生活が嫌だと何度も言っていました。それでも中学の卒業式では「中学校生活が凄く楽しかった」と言って卒業できた。だから高校も、今は嫌でもきっと楽しかったと思って卒業できると前向きで、いまは楽しい事探しをしているそうです。そういう我が子がたくましく感じました。</p>
+      <cite>高1保護者・母</cite>
+    </div>
+  </article>
+</section>
+
+<section>
+  <div class="head">
+    <p class="eyebrow">親の変化</p>
+    <h2>変わったのは、親のほうでした</h2>
+    <p>保護者自身の変化を一言で表してもらいました。</p>
+  </div>
+  <div class="shift">
+    <div><span>管理する親</span><svg viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h25M20 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>祈り信じて見守る親</span></div>
+    <div><span>手をかける子育て</span><svg viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h25M20 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>信じて見守る子育て</span></div>
+    <div><span>できないことを探す</span><svg viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h25M20 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>今の姿を認めて一緒に笑う</span></div>
+    <div><span>先回りして口を出す</span><svg viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h25M20 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>任せて、成長を見守る</span></div>
+  </div>
+  <figure class="fig"><img class="ph r32" src="img/06.jpg" alt="丘の上から学校を見つめる親子のイメージ図"><figcaption>※イメージ図</figcaption></figure>
+  <div class="words">
+    <div class="q"><p>一緒には暮らしていませんが、以前より心の距離が近くなったと感じています。</p><cite>高1保護者・母</cite></div>
+    <div class="q"><p>口論がだいぶ減り、ポジティブな会話が増えました。</p><cite>高2保護者・父</cite></div>
+    <div class="q"><p>帰省したら1週間くらい話がつきず、夜中まで喋っています。</p><cite>高2保護者・母</cite></div>
+    <div class="q"><p>自分がおもっている以上に、子供はできる。</p><cite>中3保護者・母</cite></div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <p class="eyebrow">不安</p>
+    <h2>送り出すとき、いちばん不安だったこと</h2>
+    <p>不安がなかった保護者は、ほとんどいません。</p>
+  </div>
+  <div class="pair">
+    <div class="worry">
+      <h3>あの頃の不安</h3>
+      <ul>
+        <li>朝起きられるか。約束ごとを守れるか。</li>
+        <li>自分で掃除洗濯できるのか、ホームシックは大丈夫か、お友達と24時間一緒でやっていけるのか。</li>
+        <li>寂しくないか。特に病気のときなど。</li>
+        <li>困ったとき、自分一人できちんと判断できるのだろうか。</li>
+        <li>入学式後の帰りのバスで涙が止まりませんでした。</li>
+      </ul>
+    </div>
+    <div class="now">
+      <h3>いま感じていること</h3>
+      <ul>
+        <li>良い意味で心配することが減りました。</li>
+        <li>先生方が写真付きで学校の様子を報告してくださるので、安心して見守れています。</li>
+        <li>自分の体調や思いを、先生や寮監にちゃんと伝えていると知りました。</li>
+        <li>悩んだ時、話を聞き、ともに祈ってくれる友人や先生が傍らにいます。</li>
+        <li>一学期間離れただけでも、たくましく成長して帰ってくるのでびっくりします。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <p class="eyebrow">一言アドバイス</p>
+    <h2>これから入学を考えるご家庭へ</h2>
+  </div>
+  <div class="adv">
+    <blockquote class="big"><p>かわいい子には旅をさせよとは、本当でした。我が子を12歳で旅に出すのは寂しかったですが、たくましく成長してくれました。</p><cite>高2保護者・母</cite></blockquote>
+    <blockquote><p>子どもとよくお話して、覚悟があるようであれば背中を押してあげてください。</p><cite>中1保護者・母</cite></blockquote>
+    <blockquote><p>可能な限りいろんな選択肢を示して、子どもさんの希望も含めてしっかり話し合うことが大切だと思います。</p><cite>高3保護者・父</cite></blockquote>
+    <blockquote><p>良いことも大変なことも含めて、人として育つ学校。</p><cite>高3保護者・母</cite></blockquote>
+    <blockquote><p>素敵な仲間と信頼できる大人と共に人間力を向上させる、国内留学へ行かせてみませんか？</p><cite>高3保護者・父</cite></blockquote>
+    <blockquote><p>一度学校へ見学に行き、見て頂きたい。私自身、過去に戻れるならこの学校で学びたい。</p><cite>高1保護者・母</cite></blockquote>
+    <blockquote><p>三育は、生涯の友と呼べる素晴らしい友に出会える学校です。</p><cite>高2保護者・母</cite></blockquote>
+    <blockquote><p>寮生活でどんどんたくましくなる子供を、益々誇りに思えるようになります。</p><cite>高2保護者・母</cite></blockquote>
+  </div>
+  <img class="ph r169" src="img/07.jpg" alt="山に抱かれた広島三育学院の校舎">
+</section>
+
+<section>
+  <div class="head">
+    <p class="eyebrow">実用メモ</p>
+    <h2>入学前に、知っておくとよいこと</h2>
+    <p>「知っておけばよかった」という声から。</p>
+  </div>
+  <ul class="tips">
+    <li class="tip"><b>服装・持ち物のルール</b>寮生活なので当然ですが、意識の相違がありました。「あれ？これもだめ？」という積み重ねがあったので、事前に確認を。</li>
+    <li class="tip"><b>上下関係や生徒同士の雰囲気</b>実際の様子は、学校見学で確かめるのがおすすめです。</li>
+    <li class="tip"><b>説明会では遠慮なく質問を</b>学校説明会で質問し、教えていただいたことは、入学後もその通りでした。</li>
+  </ul>
+</section>
+
+<section>
+  <div class="head">
+    <p class="eyebrow">ソアン</p>
+    <h2>寮の外へ。地域と関わる「ソアン」での変化</h2>
+    <p>地域と関わり、社会に貢献する力を育てる本校の探究活動です。</p>
+  </div>
+  <img class="ph r32" src="img/08.jpg" alt="ボランティア先で地域の方と作業する生徒">
+  <div class="words">
+    <div class="q"><p>「社会に必要とされていること」を自分自身で探す視点を持つようになりました。</p><cite>高2保護者・父</cite></div>
+    <div class="q"><p>「ありがとう」の一言でも重みがある、と言っていました。</p><cite>高1保護者・母</cite></div>
+    <div class="q"><p>何かを購入するとき、ソアンで関わった地域のものを選んでいました。</p><cite>中3保護者・母</cite></div>
+    <div class="q"><p>「楽しいから全部応募する！」と言うようになりました。</p><cite>高1保護者・母</cite></div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>次は、ご自身の目で確かめてください。</h2>
+  <p>学校見学・個別相談、資料請求を受け付けています。</p>
+  <div class="btns">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSepCKv1xytj_TgtN5djFU_dPTOqduuSFJd6Mi6XeMLWnzyg0w/viewform" target="_blank" rel="noopener">学校見学・個別相談を申し込む</a>
+    <a class="ghost" href="https://docs.google.com/a/saniku.ed.jp/forms/d/e/1FAIpQLSfEn3PVfSddrivJyTrLy3nX7ndAHgS3T33gy6OCp4jaVe19fg/viewform?c=0&amp;w=1" target="_blank" rel="noopener">資料請求</a>
+  </div>
+</section>
+
+<footer class="foot"><span>広島三育学院中学校・高等学校</span><a href="https://www.saniku.ac.jp/hiroshima/" target="_blank" rel="noopener">公式ホームページを見る</a></footer>
+
+</div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var els=document.querySelectorAll('section .head,section .ph,.q,.story,.adv blockquote,.bars,.shift div,.pair>div,.tips li,section>p,.cta .btns,.foot');
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;var el=e.target;io.unobserve(el);
+    var i=Array.prototype.indexOf.call(el.parentNode.children,el);
+    el.style.transitionDelay=Math.min(i,4)*80+'ms';el.classList.add('in');
+    setTimeout(function(){el.style.transitionDelay=''},1200);
+  })},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(el){el.classList.add('rv');io.observe(el)});
+  setTimeout(function(){document.body.offsetHeight},0);
+})();
+</script>
+</body>
+</html>
