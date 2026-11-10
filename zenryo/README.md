@@ -11,20 +11,20 @@ zenryo/
 └── README.md
 ```
 
-公開後のURL（例：リポジトリ `hsg-2026lp.github.io` の `ad/` 配下に置いた場合）
+公開後のURL（例：リポジトリ `hsg-2026lp.github.io` の `pr/` 配下に置いた場合）
 
-- A：https://hsg-2026lp.github.io/ad/zenryo/line/
-- B：https://hsg-2026lp.github.io/ad/zenryo/form/
+- A：https://hsg-2026lp.github.io/pr/zenryo/line/
+- B：https://hsg-2026lp.github.io/pr/zenryo/form/
 
 置き場所を変える場合は、各 index.html の `og:url` / `og:image` / `canonical` のURLも書き換えてください。
 
 ## GitHub へのアップ手順（ブラウザのみ）
 
 1. GitHub で公開用リポジトリを開く
-2. `ad` フォルダを開く（なければ次の手順で自動的に作られます）
+2. `pr` フォルダを開く（なければ次の手順で自動的に作られます）
 3. 「Add file」→「Upload files」
 4. パソコンの `zenryo` フォルダを、フォルダごとドラッグ＆ドロップ
-   - 置き場所を `ad/` にしたい場合は、ルートでアップした後に名前を `ad/zenryo/...` に変えるのではなく、先に `ad` フォルダを開いてからドロップするのが確実です
+   - 置き場所を `pr/` にしたい場合は、ルートでアップした後に名前を `pr/zenryo/...` に変えるのではなく、先に `pr` フォルダを開いてからドロップするのが確実です
 5. 下の「Commit changes」に「広告LP（全寮制）公開」などと書いて確定
 6. 1〜3分待ってから、上の2つのURLをスマホで開いて確認
 
@@ -40,8 +40,8 @@ zenryo/
 
 広告セットごとにリンク先を分け、UTMを付けると成果を比較できます。
 
-- A：`https://hsg-2026lp.github.io/ad/zenryo/line/?utm_source=instagram&utm_medium=paid_social&utm_campaign=zenryo2027&utm_content=line`
-- B：`https://hsg-2026lp.github.io/ad/zenryo/form/?utm_source=instagram&utm_medium=paid_social&utm_campaign=zenryo2027&utm_content=form`
+- A：`https://hsg-2026lp.github.io/pr/zenryo/line/?utm_source=instagram&utm_medium=paid_social&utm_campaign=zenryo2027&utm_content=line`
+- B：`https://hsg-2026lp.github.io/pr/zenryo/form/?utm_source=instagram&utm_medium=paid_social&utm_campaign=zenryo2027&utm_content=form`
 
 ## 計測タグ
 
